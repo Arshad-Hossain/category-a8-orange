@@ -3,7 +3,13 @@ const nextConfig = {
   /* config options here */
   // reactCompiler: true,
   images: {
-    domains: ["i.postimg.cc"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+        port: "",
+      },
+    ],
   },
 };
 export default nextConfig;
