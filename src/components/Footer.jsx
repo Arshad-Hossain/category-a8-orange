@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { BsTwitterX } from "react-icons/bs";
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -47,16 +49,16 @@ export default function Footer() {
             <h3 className="text-gray-900 font-medium mb-3">Follow Us</h3>
             <div className="flex justify-center sm:justify-start flex-wrap gap-3 text-sm">
               <a href="#" className="hover:text-black transition">
-                Facebook
+                <FaFacebook></FaFacebook>
               </a>
               <a href="#" className="hover:text-black transition">
-                Twitter
+                <BsTwitterX></BsTwitterX>
               </a>
               <a href="#" className="hover:text-black transition">
-                LinkedIn
+                <FaLinkedin></FaLinkedin>
               </a>
               <a href="#" className="hover:text-black transition">
-                GitHub
+                <FaGithub></FaGithub>
               </a>
             </div>
           </div>
