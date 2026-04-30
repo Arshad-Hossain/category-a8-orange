@@ -1,5 +1,6 @@
 import React from "react";
 import CourseCard from "./CourseCard";
+import Loading from "./Loading";
 
 const PopularCourses = async () => {
   const res = await fetch("https://category-a8-orange.vercel.app/data.json");
@@ -13,10 +14,12 @@ const PopularCourses = async () => {
   return (
     <div>
       <h1 className="text-xl font-bold my-3">Popular Courses</h1>
+
       <div className="grid grid-cols-3 gap-5">
-        {top_three_courses.map((course) => (
-          <CourseCard key={course.id} course={course}></CourseCard>
-        ))}
+        {<Loading></Loading> &&
+          top_three_courses.map((course) => (
+            <CourseCard key={course.id} course={course}></CourseCard>
+          ))}
       </div>
     </div>
   );
