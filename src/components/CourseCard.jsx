@@ -1,7 +1,7 @@
 "use client";
 import { Button, Card, Chip, Separator } from "@heroui/react";
 import Image from "next/image";
-// import Link from "next/link";
+import Link from "next/link";
 
 const CourseCard = ({ course }) => {
   return (
@@ -36,11 +36,11 @@ const CourseCard = ({ course }) => {
         </div>
       </div>
 
-      {/* <Link href={`/all-photos/${photo.id}`}>
+      <Link href={"/"}>
         <Button variant="outline" className={"w-full"}>
           View Details
         </Button>
-      </Link> */}
+      </Link>
     </Card>
   );
 };

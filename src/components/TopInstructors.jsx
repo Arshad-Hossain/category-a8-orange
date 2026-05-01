@@ -19,7 +19,6 @@ const TopInstructors = async () => {
           </p>
         </div>
 
-        {/* Grid */}
         <div
           className="grid gap-5 sm:gap-6 md:gap-8 
                         grid-cols-1 

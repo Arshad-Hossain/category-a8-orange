@@ -1,5 +1,5 @@
 "use client";
-// import { authClient } from "@/lib/auth-client";
+import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import {
   Button,
@@ -12,6 +12,7 @@ import {
   TextField,
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 export default function RegisterPage() {
   const router = useRouter();
@@ -34,7 +35,8 @@ export default function RegisterPage() {
     console.log({ data, error });
 
     if (!error) {
-      router.push("/");
+      toast("Yaay, Register Successful !");
+      router.push("/login");
     }
   };
 
