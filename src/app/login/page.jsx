@@ -12,10 +12,14 @@ import {
   TextField,
 } from "@heroui/react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { GrGoogle } from "react-icons/gr";
 import { toast } from "react-toastify";
 
 export default function LoginPage() {
+  const searchParams = useSearchParams();
+  const redirectPath = searchParams.get("redirect") || "/";
+
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -25,7 +29,8 @@ export default function LoginPage() {
     const { data, error } = await authClient.signIn.email({
       email,
       password,
-      callbackURL: "/",
+      callbackURL: redirectPath,
+      redirect: false,
     });
 
     if (error) {
@@ -43,7 +48,7 @@ export default function LoginPage() {
   // };
 
   return (
-    <Card className="border mx-auto w-125 py-10 my-20">
+    <Card className="border mx-auto w-125 py-10 mt-20 mb-30">
       <h1 className="text-center text-2xl font-bold">Login</h1>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>

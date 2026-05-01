@@ -5,13 +5,16 @@ import Link from "next/link";
 import React from "react";
 import { Avatar, Button } from "@heroui/react";
 import { authClient } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
+  const router = useRouter();
   const userData = authClient.useSession();
   const user = userData.data?.user;
 
   const handleLogout = async () => {
     await authClient.signOut();
+    router.push("/courses");
   };
   return (
     <div className="border-b px-2 mb-5">

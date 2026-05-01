@@ -1,9 +1,22 @@
 "use client";
+import { authClient } from "@/lib/auth-client";
 import { Button, Card, Chip, Separator } from "@heroui/react";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-const CourseCard = ({ course }) => {
+const AllCoursesCard = ({ course }) => {
+  const router = useRouter();
+  const userData = authClient.useSession();
+  const user = userData.data?.user;
+
+  const handleClick = () => {
+    if (!user) {
+      router.replace(`/login?redirect=/courses/${course.id}`);
+    } else {
+      router.replace(`/courses/${course.id}`);
+    }
+  };
   return (
     <Card className="border rounded-xl">
       <div className="relative w-full aspect-square">
@@ -36,13 +49,13 @@ const CourseCard = ({ course }) => {
         </div>
       </div>
 
-      <Link href={"/login"}>
-        <Button variant="outline" className={"w-full"}>
-          View Details
-        </Button>
-      </Link>
+      {/* <Link href={`/courses/${course.id}`}> */}
+      <Button onClick={handleClick} variant="outline" className={"w-full"}>
+        View Details
+      </Button>
+      {/* </Link> */}
     </Card>
   );
 };
 
-export default CourseCard;
+export default AllCoursesCard;
