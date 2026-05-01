@@ -12,7 +12,9 @@ const PopularCourses = async () => {
   console.log(top_three_courses);
   return (
     <div>
-      <h1 className="text-xl font-bold my-3">Popular Courses</h1>
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold my-5 text-center">
+        Popular Courses
+      </h2>
 
       <div className="grid grid-cols-3 gap-5">
         {top_three_courses.map((course) => (

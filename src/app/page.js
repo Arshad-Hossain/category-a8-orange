@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner";
+import LearningTips from "@/components/LearningTips";
 import PopularCourses from "@/components/PopularCourses";
 import Image from "next/image";
 import { Suspense } from "react";
@@ -11,6 +12,7 @@ export default function Home() {
         fallback={<h1 className="text-xl text-center">Data is loading...</h1>}
       >
         <PopularCourses></PopularCourses>
+        <LearningTips></LearningTips>
       </Suspense>
     </div>
   );
