@@ -30,7 +30,7 @@ const Banner = () => {
               </Button>
             </Link>
 
-            <Link href="/signup" className="w-full sm:w-auto">
+            <Link href="/login" className="w-full sm:w-auto">
               <Button
                 variant="outline"
                 className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-black px-6 py-2"

@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "experience": "8+ years",
+    "students": "25K+ students",
+    "courses": 12,
+    "image": "https://randomuser.me/api/portraits/men/32.jpg",
+    "expertise": "Full-Stack Development"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Smith",
+    "experience": "6+ years",
+    "students": "18K+ students",
+    "courses": 9,
+    "image": "https://randomuser.me/api/portraits/women/44.jpg",
+    "expertise": "React & Frontend"
+  },
+  {
+    "id": 3,
+    "name": "Michael Lee",
+    "experience": "7+ years",
+    "students": "20K+ students",
+    "courses": 10,
+    "image": "https://randomuser.me/api/portraits/men/65.jpg",
+    "expertise": "UI/UX Design"
+  }
+]
