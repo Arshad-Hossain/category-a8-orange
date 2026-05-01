@@ -1,16 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-// import { Avatar, Button } from "@heroui/react";
-// import { authClient } from "@/lib/auth-client";
+import { Avatar, Button } from "@heroui/react";
+import { authClient } from "@/lib/auth-client";
 
 const Navbar = () => {
-  // const userData = authClient.useSession();
-  // const user = userData.data?.user;
+  const userData = authClient.useSession();
+  const user = userData.data?.user;
 
-  // const handleSignOut = async () => {
-  //   await authClient.signOut();
-  // };
+  const handleLogout = async () => {
+    await authClient.signOut();
+  };
   return (
     <div className="border-b px-2 mb-5">
       <nav className=" flex justify-between items-center  py-3 max-w-7xl mx-auto w-full">
@@ -39,14 +41,11 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* <div className="flex gap-4">
+        <div className="flex gap-4">
           {!user && (
             <ul className="flex items-center  text-sm gap-5">
               <li>
-                <Link href={"/signup"}>SignUp</Link>
-              </li>
-              <li>
-                <Link href={"/signin"}>SignIn</Link>
+                <Link href={"/login"}>Login</Link>
               </li>
             </ul>
           )}
@@ -62,20 +61,20 @@ const Navbar = () => {
                 <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
               </Avatar>
 
-              <Button onClick={handleSignOut} size="sm" variant="danger">
-                SignOut
+              <Button onClick={handleLogout} size="sm" variant="danger">
+                Logout
               </Button>
             </div>
           )}
-        </div> */}
+        </div>
 
-        <div>
+        {/* <div>
           <ul>
             <li>
               <Link href={"/login"}>Login</Link>
             </li>
           </ul>
-        </div>
+        </div> */}
       </nav>
     </div>
   );

@@ -1,5 +1,5 @@
 "use client";
-// import { authClient } from "@/lib/auth-client";
+import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import {
   Button,
@@ -13,6 +13,7 @@ import {
 } from "@heroui/react";
 import Link from "next/link";
 import { GrGoogle } from "react-icons/gr";
+import { toast } from "react-toastify";
 
 export default function LoginPage() {
   const onSubmit = async (e) => {
@@ -27,6 +28,11 @@ export default function LoginPage() {
       callbackURL: "/",
     });
 
+    if (error) {
+      toast.error(error.message || "Login failed");
+      return;
+    }
+
     console.log({ data, error });
   };
 
@@ -37,7 +43,7 @@ export default function LoginPage() {
   // };
 
   return (
-    <Card className="border mx-auto w-125 py-10 mt-5">
+    <Card className="border mx-auto w-125 py-10 my-20">
       <h1 className="text-center text-2xl font-bold">Login</h1>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
