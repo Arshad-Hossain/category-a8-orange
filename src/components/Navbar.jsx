@@ -68,6 +68,14 @@ const Navbar = () => {
             </div>
           )}
         </div> */}
+
+        <div>
+          <ul>
+            <li>
+              <Link href={"/login"}>Login</Link>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   );
