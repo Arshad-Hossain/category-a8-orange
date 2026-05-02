@@ -34,6 +34,7 @@ The purpose of **SkillSphere** is to create a centralized online learning enviro
 - **Gravity UI**
 - **Better Auth**
 - **React Toastify** (for notifications)
+- **React Spring**
 
 ---
 
