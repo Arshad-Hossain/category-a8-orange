@@ -37,6 +37,9 @@ export default function RegisterPage() {
     if (!error) {
       toast("Yaay, Register Successful !");
       router.push("/login");
+    } else {
+      toast.error(error.message || "Register failed");
+      return;
     }
   };
 
