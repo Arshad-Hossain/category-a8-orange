@@ -1,5 +1,5 @@
-# 🎓 SkillSphere
 
+<<<<<<< HEAD
 **SkillSphere** is an online learning platform designed to provide a seamless and interactive learning experience for users. It helps learners access structured educational content in a simple and modern interface.
 
 ---
@@ -54,3 +54,5 @@ cd skillsphere
 npm install
 npm run dev
 ```
+=======
+>>>>>>> 23930adc7521964e936feb4a3204d5cd58841841
