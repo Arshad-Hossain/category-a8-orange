@@ -41,11 +41,11 @@ export default function LoginPage() {
     console.log({ data, error });
   };
 
-  // const handlGoogleSignIn = async () => {
-  //   await authClient.signIn.social({
-  //     provider: "google",
-  //   });
-  // };
+  const handlGoogleSignIn = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
+  };
 
   return (
     <Card className="border mx-auto w-125 py-10 mt-20 mb-30">
@@ -65,7 +65,7 @@ export default function LoginPage() {
           }}
         >
           <Label>Email</Label>
-          <Input placeholder="john@example.com" />
+          <Input placeholder="kane@example.com" />
           <FieldError />
         </TextField>
 
@@ -109,13 +109,13 @@ export default function LoginPage() {
 
       <p className="text-center">Or</p>
 
-      {/* <Button
+      <Button
         onClick={handlGoogleSignIn}
         variant="outline"
         className={"w-full"}
       >
         <GrGoogle /> Sign In With Google
-      </Button> */}
+      </Button>
 
       <h2 className="text-center">
         Dont have account yet ?

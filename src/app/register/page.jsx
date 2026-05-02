@@ -70,7 +70,7 @@ export default function RegisterPage() {
           }}
         >
           <Label>Email</Label>
-          <Input placeholder="john@example.com" />
+          <Input placeholder="Sarah@example.com" />
           <FieldError />
         </TextField>
 
