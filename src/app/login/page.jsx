@@ -18,8 +18,10 @@ import { GrGoogle } from "react-icons/gr";
 import { toast } from "react-toastify";
 
 export default function LoginPage() {
-  const searchParams = useSearchParams();
-  const redirectPath = searchParams.get("redirect") || "/";
+  // const searchParams = useSearchParams();
+  // const redirectPath = searchParams.get("redirect") || "/";
+
+  const redirectPath = "/";
 
   const onSubmit = async (e) => {
     e.preventDefault();
