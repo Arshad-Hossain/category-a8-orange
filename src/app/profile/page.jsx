@@ -9,9 +9,9 @@ const ProfilePage = () => {
   const userData = authClient.useSession();
   const user = userData.data?.user;
 
-  if (!user) {
-    redirect("/login");
-  }
+  // if (!user) {
+  //   redirect("/login");
+  // }
 
   return (
     <div className="mt-20 mb-50">
