@@ -21,8 +21,6 @@ export default function LoginPage() {
   // const searchParams = useSearchParams();
   // const redirectPath = searchParams.get("redirect") || "/";
 
-  const redirectPath = "/";
-
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -32,8 +30,9 @@ export default function LoginPage() {
     const { data, error } = await authClient.signIn.email({
       email,
       password,
-      callbackURL: redirectPath,
-      redirect: false,
+      callbackURL: "/",
+      // callbackURL: redirectPath,
+      // redirect: false,
     });
 
     if (error) {
