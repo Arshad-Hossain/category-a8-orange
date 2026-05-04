@@ -1,5 +1,4 @@
 "use client";
-export const dynamic = "force-dynamic";
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import {
@@ -13,7 +12,6 @@ import {
   TextField,
 } from "@heroui/react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { GrGoogle } from "react-icons/gr";
 import { toast } from "react-toastify";
 
@@ -31,8 +29,6 @@ export default function LoginPage() {
       email,
       password,
       callbackURL: "/",
-      // callbackURL: redirectPath,
-      // redirect: false,
     });
 
     if (error) {
